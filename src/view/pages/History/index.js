@@ -18,7 +18,7 @@ function History ({ setCurrentNumber }) {
 
   function handleClick (id) {
     setCurrentNumber([id])
-    navigate('/russian-hymns')
+    navigate('/arm-hymns')
   }
   return (
     <StyledBox>

@@ -26,7 +26,7 @@ function Bookmarks ({ setCurrentNumber }) {
   function handleClick (ids) {
     const hymnIds = historyStore.set('searchedHymns', ids)
     setCurrentNumber(hymnIds)
-    navigate('/russian-hymns')
+    navigate('/arm-hymns')
   }
 
   function handleDelete (id) {

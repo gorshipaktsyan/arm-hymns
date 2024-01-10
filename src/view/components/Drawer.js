@@ -16,7 +16,7 @@ function DrawerComponent({
 }) {
   const navigate = useNavigate();
   function handleNavigate(item) {
-    navigate(`/russian-hymns/${item.route}`);
+    navigate(`/arm-hymns/${item.route}`);
     setTitle(item.tittle);
   }
   return (

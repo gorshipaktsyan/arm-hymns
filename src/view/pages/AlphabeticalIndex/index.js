@@ -14,7 +14,7 @@ function AlphabeticalIndex ({ setCurrentNumber }) {
   function handleTitleClick (id) {
     const hymnIds = historyStore.set('searchedHymns', id)
     setCurrentNumber(hymnIds)
-    navigate('/russian-hymns')
+    navigate('/arm-hymns')
   }
 
   return (

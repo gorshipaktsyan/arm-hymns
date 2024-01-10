@@ -20,7 +20,7 @@ const { StyledApp } = StyledComponents
 function App ({ open, currentNumber, setCurrentNumber }) {
   const routes = [
     {
-      path: '/russian-hymns',
+      path: '/arm-hymns',
       element: (
         <Hymn
           open={open}
@@ -29,29 +29,29 @@ function App ({ open, currentNumber, setCurrentNumber }) {
         />
       )
     },
-    { path: '/russian-hymns/settings', element: <Settings /> },
-    { path: '/russian-hymns/about', element: <About /> },
+    { path: '/arm-hymns/settings', element: <Settings /> },
+    { path: '/arm-hymns/about', element: <About /> },
     {
-      path: '/russian-hymns/alphabetical',
+      path: '/arm-hymns/alphabetical',
       element: <AlphabeticalIndex setCurrentNumber={setCurrentNumber} />
     },
     {
-      path: '/russian-hymns/bookmark',
+      path: '/arm-hymns/bookmark',
       element: <Bookmarks setCurrentNumber={setCurrentNumber} />
     },
     {
-      path: '/russian-hymns/content',
+      path: '/arm-hymns/content',
       element: <Content setCurrentNumber={setCurrentNumber} />
     },
     {
-      path: '/russian-hymns/history',
+      path: '/arm-hymns/history',
       element: <History setCurrentNumber={setCurrentNumber} />
     },
 
-    { path: '/russian-hymns/preface', element: <Preface /> },
-    { path: '/russian-hymns/reference', element: <Reference /> },
+    { path: '/arm-hymns/preface', element: <Preface /> },
+    { path: '/arm-hymns/reference', element: <Reference /> },
     {
-      path: '/russian-hymns/search',
+      path: '/arm-hymns/search',
       element: <Search setCurrentNumber={setCurrentNumber} />
     }
   ]

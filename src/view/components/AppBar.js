@@ -61,7 +61,7 @@ function AppBarComponent ({
           <MenuIcon sx={{ fontSize: '30px' }} />
         </IconButton>
         <Box sx={{ fontSize: '20px', cursor: 'default' }}>{title}</Box>
-        {location.pathname === '/russian-hymns' ? (
+        {location.pathname === '/arm-hymns' ? (
           <>
             <Box
               sx={{

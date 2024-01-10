@@ -50,7 +50,7 @@ function Search ({ setCurrentNumber }) {
 
     if (number.length) {
       historyStore.set('searchedHymns', number)
-      navigate('/russian-hymns')
+      navigate('/arm-hymns')
     }
     setErrorAlert(true)
   }

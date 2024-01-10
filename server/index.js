@@ -2,10 +2,10 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const fs = require('fs');
 
-const dbFilePath = path.join(__dirname, 'hymns.db');
+const dbFilePath = path.join(__dirname, 'hymns12.db');
 const db = new sqlite3.Database(dbFilePath);
 
-const tableName = 'hymns';
+const tableName = 'hymns_search';
 const query = `SELECT * FROM ${tableName} LIMIT 801`;
 
 db.all(query, (err, rows) => {
@@ -16,7 +16,7 @@ db.all(query, (err, rows) => {
             console.log('No rows found.');
         } else {
             // Save the first 50 rows to a JSON file called 'storage.json'
-            const resultFilePath = path.join(__dirname, 'hymns.json');
+            const resultFilePath = path.join(__dirname, tableName + '.json');
             const resultArray = rows.map(row => Object.assign({}, row)); // Create a copy of each row
 
             fs.writeFile(resultFilePath, JSON.stringify(resultArray, null, 2), (writeErr) => {
