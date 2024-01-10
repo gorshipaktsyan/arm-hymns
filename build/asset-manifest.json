@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/russian-hymns/static/css/main.13e074ff.css",
+    "main.js": "/russian-hymns/static/js/main.b02ba28b.js",
+    "static/js/787.06d1fc33.chunk.js": "/russian-hymns/static/js/787.06d1fc33.chunk.js",
+    "service-worker.js": "/russian-hymns/service-worker.js",
+    "index.html": "/russian-hymns/index.html",
+    "main.13e074ff.css.map": "/russian-hymns/static/css/main.13e074ff.css.map",
+    "main.b02ba28b.js.map": "/russian-hymns/static/js/main.b02ba28b.js.map",
+    "787.06d1fc33.chunk.js.map": "/russian-hymns/static/js/787.06d1fc33.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.13e074ff.css",
+    "static/js/main.b02ba28b.js"
+  ]
+}
