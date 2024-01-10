@@ -2,31 +2,13 @@ import { Box } from '@mui/material'
 import StyledComponents from '../../../utils/sharedStyles'
 
 const RussianAlphabetCapital = [
-  'А',
-  'Б',
-  'В',
-  'Г',
-  'Д',
-  'Е',
-  'Ж',
-  'З',
-  'И',
-  'К',
-  'Л',
-  'М',
-  'Н',
-  'О',
-  'П',
-  'Р',
-  'С',
-  'Т',
-  'У',
-  'Х',
-  'Ц',
-  'Ч',
-  'Ш',
-  'Э',
-  'Я'
+  ['Ա', 'Բ', 'Գ', 'Դ', 'Ե'],
+  ['Զ', 'Է', 'Թ', 'Ժ', 'Ի'],
+  ['Լ', 'Խ', 'Ծ', 'Կ', 'Հ'],
+  ['Ձ', 'Ղ', 'Ճ', 'Մ', 'Յ'],
+  ['Ն', 'Շ', 'Ո', 'Չ', 'Պ'],
+  ['Ջ', 'Ս', 'Վ', 'Տ', 'Ց'],
+  ['Ու', 'Փ', 'Ք', 'Օ'],
 ]
 const { StyledAlphabet, StyledLetter } = StyledComponents
 function Alphabet ({ setLetter }) {

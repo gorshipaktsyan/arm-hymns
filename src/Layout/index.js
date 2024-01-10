@@ -18,15 +18,15 @@ import Box from '@mui/material/Box'
 });*/
 
 const navItems = [
-  { tittle: 'Расширенный поиск', route: 'search' },
-  { tittle: 'Содержанье', route: 'content' },
-  { tittle: 'Алфавитный указатель', route: 'alphabetical' },
-  { tittle: 'История', route: 'history' },
-  { tittle: 'Закладки', route: 'bookmark' },
-  { tittle: 'Предисловие', route: 'preface' },
-  { tittle: 'Справка', route: 'reference' },
+  { tittle: 'Որոնում', route: 'search' },
+  { tittle: 'Բովանդակություն', route: 'content' },
+  { tittle: 'Այբբենական ցուցիչ', route: 'alphabetical' },
+  { tittle: 'Պատմություն', route: 'history' },
+  { tittle: 'Էջանիշեր', route: 'bookmark' },
+  { tittle: 'Նախաբան', route: 'preface' },
+  { tittle: 'Տեղեկություն', route: 'reference' },
   /*{ tittle: 'Настройки', route: 'settings' },*/
-  { tittle: 'O Программе', route: 'about' }
+  { tittle: 'Ծրագրի մասին', route: 'about' }
 ]
 
 function Layout () {
