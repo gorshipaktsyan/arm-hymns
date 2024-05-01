@@ -1,6 +1,6 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import CssBaseline from '@mui/material/CssBaseline'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
 import {
   About,
   AlphabeticalIndex,
@@ -11,61 +11,100 @@ import {
   Preface,
   Reference,
   Search,
-  Settings
-} from '../view/pages'
-import StyledComponents from '../utils/sharedStyles'
+  Settings,
+} from "../view/pages";
+import StyledApp from "./styles";
 
-const { StyledApp } = StyledComponents
-
-function App ({ open, currentNumber, setCurrentNumber }) {
+function App({
+  currentNumber,
+  setCurrentNumber,
+  setTitle,
+  fontSize,
+  setFontSize,
+  useArrows,
+  setUseArrows,
+  isMobile,
+  openSearchedHymnList,
+  setOpenSearchedHymnList,
+  englishSearch,
+  setEnglishSearch,
+}) {
   const routes = [
     {
-      path: '/arm-hymns',
+      path: "/",
+      element: (
+        <Search
+          setCurrentNumber={setCurrentNumber}
+          openSearchedHymnList={openSearchedHymnList}
+          setOpenSearchedHymnList={setOpenSearchedHymnList}
+          englishSearch={englishSearch}
+        />
+      ),
+    },
+    {
+      path: "/hymns/:number",
       element: (
         <Hymn
-          open={open}
           currentNumber={currentNumber}
           setCurrentNumber={setCurrentNumber}
+          useArrows={useArrows}
+          isMobile={isMobile}
         />
-      )
-    },
-    { path: '/arm-hymns/settings', element: <Settings /> },
-    { path: '/arm-hymns/about', element: <About /> },
-    {
-      path: '/arm-hymns/alphabetical',
-      element: <AlphabeticalIndex setCurrentNumber={setCurrentNumber} />
+      ),
     },
     {
-      path: '/arm-hymns/bookmark',
-      element: <Bookmarks setCurrentNumber={setCurrentNumber} />
+      path: "/settings",
+      element: (
+        <Settings
+          fontSize={fontSize}
+          setFontSize={setFontSize}
+          useArrows={useArrows}
+          setUseArrows={setUseArrows}
+          isMobile={isMobile}
+          englishSearch={englishSearch}
+          setEnglishSearch={setEnglishSearch}
+        />
+      ),
+    },
+    { path: "/about", element: <About /> },
+    {
+      path: "/alphabetical",
+      element: (
+        <AlphabeticalIndex
+          setCurrentNumber={setCurrentNumber}
+          setTitle={setTitle}
+          isMobile={isMobile}
+        />
+      ),
     },
     {
-      path: '/arm-hymns/content',
-      element: <Content setCurrentNumber={setCurrentNumber} />
+      path: "/bookmark",
+      element: <Bookmarks setCurrentNumber={setCurrentNumber} />,
     },
     {
-      path: '/arm-hymns/history',
-      element: <History setCurrentNumber={setCurrentNumber} />
+      path: "/content",
+      element: (
+        <Content setCurrentNumber={setCurrentNumber} fontSize={fontSize} />
+      ),
     },
-
-    { path: '/arm-hymns/preface', element: <Preface /> },
-    { path: '/arm-hymns/reference', element: <Reference /> },
     {
-      path: '/arm-hymns/search',
-      element: <Search setCurrentNumber={setCurrentNumber} />
-    }
-  ]
+      path: "/history",
+      element: <History setCurrentNumber={setCurrentNumber} />,
+    },
+    { path: "/preface", element: <Preface /> },
+    { path: "/reference", element: <Reference /> },
+  ];
 
   return (
     <StyledApp>
       <CssBaseline />
       <Routes>
-        {routes.map(route => (
+        {routes.map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
       </Routes>
     </StyledApp>
-  )
+  );
 }
 
-export default App
+export default App;

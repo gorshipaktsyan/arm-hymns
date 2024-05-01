@@ -6,18 +6,17 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 
-const drawerWidth = 240;
-
 function DrawerComponent({
   navItems,
   mobileOpen,
   handleDrawerToggle,
   setTitle,
+  fontSize,
 }) {
   const navigate = useNavigate();
   function handleNavigate(item) {
-    navigate(`/arm-hymns/${item.route}`);
-    setTitle(item.tittle);
+    navigate(`/${item.route}`);
+    setTitle(item.title);
   }
   return (
     <Drawer
@@ -25,28 +24,40 @@ function DrawerComponent({
       open={mobileOpen}
       onClose={handleDrawerToggle}
       ModalProps={{
-        keepMounted: true, // Better open performance on mobile.
+        keepMounted: true,
       }}
       sx={{
-        "& .MuiDrawer-paper": { boxSizing: "border-box", width: drawerWidth },
+        "& .MuiDrawer-paper": {
+          boxSizing: "border-box",
+          width: "240px",
+          paddingTop: "64px",
+        },
       }}
     >
       <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
         <List>
-          {navItems.map((item) => (
+          {navItems.slice(1).map((item) => (
             <ListItem
-              key={item.tittle}
+              key={item.title}
               disablePadding
               onClick={() => handleNavigate(item)}
             >
               <ListItemButton>
-                <Box sx={{fontSize: '18px'}}>
-                  {item.tittle}
-                </Box>
+                <Box sx={{ fontSize: `${fontSize}em` }}>{item.title}</Box>
               </ListItemButton>
             </ListItem>
           ))}
         </List>
+      </Box>
+      <Box
+        sx={{
+          marginLeft: "10px",
+          position: "absolute",
+          bottom: 10,
+          fontSize: "13px",
+        }}
+      >
+        <p>Տարբերակ: 1.3.7</p>
       </Box>
     </Drawer>
   );
