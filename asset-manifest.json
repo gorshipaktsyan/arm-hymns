@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/arm-hymns/static/css/main.13e074ff.css",
-    "main.js": "/arm-hymns/static/js/main.dad665b8.js",
+    "main.css": "/arm-hymns/static/css/main.2443d9cc.css",
+    "main.js": "/arm-hymns/static/js/main.20b5b33f.js",
     "static/js/787.4de38e02.chunk.js": "/arm-hymns/static/js/787.4de38e02.chunk.js",
     "service-worker.js": "/arm-hymns/service-worker.js",
     "index.html": "/arm-hymns/index.html",
-    "main.13e074ff.css.map": "/arm-hymns/static/css/main.13e074ff.css.map",
-    "main.dad665b8.js.map": "/arm-hymns/static/js/main.dad665b8.js.map",
+    "main.2443d9cc.css.map": "/arm-hymns/static/css/main.2443d9cc.css.map",
+    "main.20b5b33f.js.map": "/arm-hymns/static/js/main.20b5b33f.js.map",
     "787.4de38e02.chunk.js.map": "/arm-hymns/static/js/787.4de38e02.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13e074ff.css",
-    "static/js/main.dad665b8.js"
+    "static/css/main.2443d9cc.css",
+    "static/js/main.20b5b33f.js"
   ]
 }
